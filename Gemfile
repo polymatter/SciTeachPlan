@@ -9,7 +9,7 @@ gem 'rails', '3.1.1'
 # PG Gem required for deployment onto Heroku (for unknown reasons)
 # pg provides a PostgreSQL database, recommended as per http://devcenter.heroku.com/articles/rails3
 #group :production do
-# gem 'sqlite3'
+gem 'sqlite3'
 gem "pg"
 #end
 
