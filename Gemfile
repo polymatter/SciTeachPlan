@@ -1,21 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-# gem 'execjs'
-# gem 'therubyracer'
-
-
-# PG Gem required for deployment onto Heroku (for unknown reasons)
-# pg provides a PostgreSQL database, recommended as per http://devcenter.heroku.com/articles/rails3
-#group :production do
-#gem 'sqlite3'
+# PG Gem required for deployment onto Heroku, provides a PostgreSQL database
+# recommended as per http://devcenter.heroku.com/articles/rails3
+# gem 'sqlite3', '1.3.3', :group => :deployment 
+# sqlite3 version 1.3.3 won't work with rails3.1,
+# as per http://ruby.railstutorial.org/chapters/rails-3-1#sec:installing_and_configuring_rails_3_1
 gem 'pg'
-#end
 
+# Thin webserver is recommended by Heroku, but deployment fails with it
 # gem 'thin'
 gem "heroku"
 
