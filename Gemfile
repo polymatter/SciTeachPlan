@@ -5,11 +5,12 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
-# Gem required for deployment onto Heroku (for unknown reasons)
+# PG Gem required for deployment onto Heroku (for unknown reasons)
+# pg provides a PostgreSQL database, recommended as per http://devcenter.heroku.com/articles/rails3
 #group :production do
-#	gem "pg"
+# gem 'sqlite3'
+gem "pg"
 #end
 
 
