@@ -12,8 +12,8 @@ gem 'rails', '3.1.1'
 # PG Gem required for deployment onto Heroku (for unknown reasons)
 # pg provides a PostgreSQL database, recommended as per http://devcenter.heroku.com/articles/rails3
 #group :production do
-gem 'sqlite3'
-#gem 'pg'
+#gem 'sqlite3'
+gem 'pg'
 #end
 
 
@@ -22,7 +22,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
-  #gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 #gem 'jquery-rails'
