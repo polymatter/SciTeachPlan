@@ -7,8 +7,9 @@ development:
   adapter: postgresql
   encoding: unicode
   database: sciteachplan_development
-  user: sciteachplan
-  password:
+  pool: 5
+  username: postgres
+  password: banana
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,12 +18,14 @@ test:
   adapter: postgresql
   encoding: unicode
   database: sciteachplan_test
-  user: sciteachplan
-  password:
+  pool: 5
+  username: postgres
+  password: banana
 
 production:
   adapter: postgresql
   encoding: unicode
   database: sciteachplan_production
-  user: sciteachplan
-  password:
+  pool: 5
+  username: postgres
+  password: banana
