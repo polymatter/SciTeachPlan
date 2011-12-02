@@ -33,8 +33,7 @@
   </div>
   <div class="field">
 	<%= f.label "Class" %><br />
-	<%= select("lesson", "l_class_id", LClass.all.collect {|c| [c.name, c.id] },
-		{:prompt => 'Class'}) %>
+	<%= select("lesson", "l_class_id", LClass.all.collect {|c| [c.name, c.id] }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
