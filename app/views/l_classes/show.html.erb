@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @l_class.name %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @l_class.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_l_class_path(@l_class) %> |
+<%= link_to 'Back', l_classes_path %>

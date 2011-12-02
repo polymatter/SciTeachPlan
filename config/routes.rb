@@ -1,4 +1,6 @@
 Sciteachplan::Application.routes.draw do
+  resources :l_classes
+
   resources :lessons
 
   get "welcome/index"
