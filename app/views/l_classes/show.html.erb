@@ -19,14 +19,14 @@
 	<th>Title</th>
 	<th></th>
 	<th></th>
-	<th>
+	<th></th>
   </tr>
 <%  @l_class.lessons.each do |lesson| %>
   <tr>
     <td><%= lesson.when.strftime("%A") %></td>
 	<td><%= lesson.when.strftime("%d %b %Y") %></td>
 	<td><%= lesson.when.strftime("%H:%M") %></td>
-	<td><%= lesson.title %></td>
+	<td><%= link_to lesson.title, lesson %></td>
 	<td><%= link_to 'Show', lesson %></td>
 	<td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
   </tr>
@@ -39,4 +39,4 @@
 <%= link_to "Add Lesson", new_lesson_path %>
 <p />
 <%= link_to 'Edit', edit_l_class_path(@l_class) %> |
-<%= link_to 'Back', l_classes_path %>
+<%= link_to 'List all Classes', l_classes_path %>
