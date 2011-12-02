@@ -7,9 +7,36 @@
 
 <p>
   <b>Notes:</b>
-  <%= @l_class.notes %>
+  <pre><%= @l_class.notes %></pre>
 </p>
 
+<% if !@l_class.lessons.empty? %>
+<table border="1" width="100%">
+  <tr>
+    <th>Day</th>
+	<th>Date</th>
+	<th>Time</th>
+	<th>Title</th>
+	<th></th>
+	<th></th>
+	<th>
+  </tr>
+<%  @l_class.lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.when.strftime("%A") %></td>
+	<td><%= lesson.when.strftime("%d %b %Y") %></td>
+	<td><%= lesson.when.strftime("%H:%M") %></td>
+	<td><%= lesson.title %></td>
+	<td><%= link_to 'Show', lesson %></td>
+	<td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+	<p><b>No lessons in this class</b></p> 
+<% end %>
 
+<%= link_to "Add Lesson", new_lesson_path %>
+<p />
 <%= link_to 'Edit', edit_l_class_path(@l_class) %> |
 <%= link_to 'Back', l_classes_path %>

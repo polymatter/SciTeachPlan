@@ -1,9 +1,10 @@
 <h1>Listing Classes</h1>
 
-<table>
+<table border="1" width="100%">
   <tr>
     <th>Name</th>
     <th>Notes</th>
+	<th>Lessons</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +13,8 @@
 <% @l_classes.each do |l_class| %>
   <tr>
     <td><%= l_class.name %></td>
-    <td><%= l_class.notes %></td>
+    <td><pre><%= l_class.notes %></pre></td>
+	<td><%= link_to l_class.lessons.count, l_class %></td>
     <td><%= link_to 'Show', l_class %></td>
     <td><%= link_to 'Edit', edit_l_class_path(l_class) %></td>
     <td><%= link_to 'Destroy', l_class, confirm: 'Are you sure?', method: :delete %></td>
@@ -22,4 +24,4 @@
 
 <br />
 
-<%= link_to 'New L class', new_l_class_path %>
+<%= link_to 'New Class', new_l_class_path %>

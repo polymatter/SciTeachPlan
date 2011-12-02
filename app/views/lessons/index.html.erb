@@ -7,6 +7,7 @@
     <th>Reqs</th>
     <th>Homework</th>
     <th>Date</th>
+	<th>Class</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,8 +19,9 @@
     <td><%= lesson.plan %></td>
     <td><%= lesson.reqs %></td>
     <td><%= lesson.homework %></td>
-    <td><%= lesson.when %></td>
-    <td><%= link_to 'Show', lesson %></td>
+    <td><%= lesson.when.strftime("%A %d %b %Y at %H:%M") %></td>
+    <td><%= link_to lesson.l_class.name, lesson.l_class %></td>
+	<td><%= link_to 'Show', lesson %></td>
     <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
     <td><%= link_to 'Destroy', lesson, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
