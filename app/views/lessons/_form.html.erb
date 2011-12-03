@@ -36,6 +36,6 @@
 	<%= select("lesson", "l_class_id", LClass.all.collect {|c| [c.name, c.id] }) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save" %>
   </div>
 <% end %>

@@ -15,7 +15,7 @@
 
 <% @lessons.each do |lesson| %>
   <tr>
-    <td><%= lesson.title %></td>
+    <td><%= link_to lesson.title, lesson %></td>
     <td><%= lesson.plan %></td>
     <td><%= lesson.reqs %></td>
     <td><%= lesson.homework %></td>
@@ -30,4 +30,6 @@
 
 <br />
 
+<p>
 <%= link_to 'New Lesson', new_lesson_path %>
+</p>
