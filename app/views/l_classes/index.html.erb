@@ -13,7 +13,7 @@
 <% @l_classes.each do |l_class| %>
   <tr>
     <td><%= link_to l_class.name, l_class %></td>
-    <td><pre><%= l_class.notes %></pre></td>
+    <td><code><%= l_class.notes %></code></td>
 	<td><%= link_to l_class.lessons.count, l_class %></td>
     <td><%= link_to 'Show', l_class %></td>
     <td><%= link_to 'Edit', edit_l_class_path(l_class) %></td>
