@@ -158,6 +158,12 @@ input:focus, select:focus, textarea:focus {
 #name, #email, #message, #website {
 	width: 460px;
 }
+textarea, intput.text {
+	width: 600px;
+}
+textarea {
+	height: 120px;
+}
 input.button {
 	font: bold 12px Arial, Sans-serif;
 	height: 30px;
