@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <b>Reqs:</b>
+  <b>Information for Technicians:</b>
   <%= @lesson.reqs %>
 </p>
 
@@ -30,5 +30,7 @@
   <%= link_to @lesson.l_class.name, @lesson.l_class %>
 </p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'List all Lessons', lessons_path %>
+<p>
+  <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+  <%= link_to 'List all Lessons', lessons_path %>
+</p>
