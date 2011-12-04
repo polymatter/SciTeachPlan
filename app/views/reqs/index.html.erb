@@ -1,0 +1,25 @@
+<h1>Listing all Requisitions</h1>
+
+<table>
+  <tr>
+    <th>Week</th>
+	<th>Day</th>
+	<th>Date</th>
+	<th>Class</th>
+	<th>Lesson</th>
+	<th>Time</th>
+	<th>Requisition</th>
+  </tr>
+  
+<% @lessons.each do |lesson| %>
+  <tr>
+    <td><%= lesson.when.strftime("%W") %></td>
+	<td><%= lesson.when.strftime("%A") %></td>
+	<td><%= lesson.when.strftime("%d %b %Y")%> </td>
+	<td><%= link_to lesson.l_class.name, lesson.l_class %></td>
+	<td><%= link_to lesson.title, lesson %></td>
+	<td><%= lesson.when.strftime("%H:%M")%> </td>
+	<td><%= lesson.reqs %></td>
+  </tr>
+<% end %>
+</table>
