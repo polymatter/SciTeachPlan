@@ -1,10 +1,14 @@
 Sciteachplan::Application.routes.draw do
   resources :l_classes
-
   resources :lessons
-
+	
   get "welcome/index"
 
+  match 'classes' => "LClasses#index", :as => "class_list"
+  match 'classes/:id' => "LClasses#edit", :via => :get
+  #match 'classes/:id' => 
+  match 'classes/:id' => "LClasses#remove", :via => :delete
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
