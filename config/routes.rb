@@ -4,10 +4,10 @@ Sciteachplan::Application.routes.draw do
 	
   get "welcome/index"
 
-  match 'classes' => "LClasses#index", :as => "class_list"
-  match 'classes/:id' => "LClasses#edit", :via => :get
-  #match 'classes/:id' => 
-  match 'classes/:id' => "LClasses#remove", :via => :delete
+  #match 'classes' => "LClasses#index", :as => "class_list"
+  #match 'classes/edit/:id' => "LClasses#edit", :via => :get, :as => "edit_class"
+  #match 'classes/new/:id' => "LClasses#new", :via => :put, :as => "new_class"
+  #match 'classes/:id' => "LClasses#destroy", :via => :delete, :as => "destroy_class"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
