@@ -19,9 +19,8 @@
 	<th>Title</th>
 	<th></th>
 	<th></th>
-	<th></th>
   </tr>
-<%  @l_class.lessons.each do |lesson| %>
+<%  @l_class.lessons.find(:all, :order => "lessons.when").each do |lesson| %>
   <tr>
     <td><%= lesson.when.strftime("%A") %></td>
 	<td><%= lesson.when.strftime("%d %b %Y") %></td>
