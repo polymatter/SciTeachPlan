@@ -1,8 +1,15 @@
 <h1>Showing Requisitions for Week <%= @week %></h1>
 
+<% prev_week = (@week.to_i - 1).to_s %>
+<% next_week = (@week.to_i + 1).to_s %>
+
+<p>
+  <%= link_to "<< Previous Week", prev_week %> |
+  <%= link_to "Next Week >>", next_week %>
+</p>
+
 <table>
   <tr>
-    <th>Week</th>
 	<th>Day</th>
 	<th>Date</th>
 	<th>Class</th>
@@ -15,7 +22,6 @@
   <% l_week = lesson.when.strftime("%W") %>
   <% if l_week == @week %>
   <tr>
-    <td><%= l_week %></td>
 	<td><%= lesson.when.strftime("%A") %></td>
 	<td><%= lesson.when.strftime("%d %b %Y")%> </td>
 	<td><%= link_to lesson.l_class.name, lesson.l_class %></td>
@@ -26,3 +32,7 @@
   <% end %>
 <% end %>
 </table>
+
+<p>
+  <%= link_to "List Requisitions for all weeks", reqs_list_path %>
+</p>
