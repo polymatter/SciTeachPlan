@@ -12,8 +12,10 @@
   </tr>
   
 <% @lessons.each do |lesson| %>
+  <% week = lesson.when.strftime("%W") %>
+
   <tr>
-    <td><%= lesson.when.strftime("%W") %></td>
+    <td><%= link_to week, reqs_path(week) %></td>
 	<td><%= lesson.when.strftime("%A") %></td>
 	<td><%= lesson.when.strftime("%d %b %Y")%> </td>
 	<td><%= link_to lesson.l_class.name, lesson.l_class %></td>
