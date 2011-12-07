@@ -1,0 +1,28 @@
+<h1>Showing Daily Schedule for <%= @day %>/<%= @month %>/<%= @year %></h1>
+
+<% dow = "" %>
+
+<% @lessons.each do |lesson| %>
+  <% l_day = lesson.when.strftime("%d").to_i %>
+  <% l_month = lesson.when.strftime("%m").to_i %>
+  <% l_year = lesson.when.strftime("%Y").to_i %>
+  <% l_dow  = lesson.when.strftime("%A") %> 
+  
+  <% if (l_day == @day) && (l_month == @month) && (l_year == @year) %>
+	<% if l_dow != dow %>
+	  <% dow = l_dow %>
+      <hr /><p><b><%= lesson.when.strftime("%A") %></b></p>   
+    <% end %> 
+	
+	<p>
+	  <%= lesson.when.strftime("%H:%M")%>
+	  <%= link_to lesson.l_class.name, lesson.l_class %>
+	  <%= link_to lesson.title, lesson %>
+	</p>
+	
+  <% end %>
+<% end %>
+
+<p>
+  <%= link_to "List Requisitions for all weeks", reqs_list_path %>
+</p>

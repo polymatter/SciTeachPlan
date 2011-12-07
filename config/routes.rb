@@ -7,6 +7,8 @@ Sciteachplan::Application.routes.draw do
   match 'reqs' => "Reqs#index", :as => "reqs_list"
   match 'reqs/:week' => "Reqs#show", :as => "reqs"
   
+  match 'schedule/:day/:month/:year' => "Schedule#show", :as => "days"
+  
   #match 'classes' => "LClasses#index", :as => "class_list"
   #match 'classes/edit/:id' => "LClasses#edit", :via => :get, :as => "edit_class"
   #match 'classes/new/:id' => "LClasses#new", :via => :put, :as => "new_class"
